@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('login');
+    return redirect('create');
 });
 Route::group(['middleware' => 'checkloggedin'], function(){
 	Route::get('home', 'StudentController@index')->name('home');
@@ -34,3 +34,5 @@ Route::get('signup', 'StudentController@signup');
 Route::post('signupStore','StudentController@signupStore');
 
 Route::get('logout', 'StudentController@logout');
+
+Route::get('login', 'StudentController@login');

@@ -11,8 +11,13 @@ class StudentController extends Controller
 {
 	public function logout(){
 	Session::flush();
-      return redirect('/');
-	}		
+      return redirect('create');
+	}	
+
+    public function login()
+    {
+        return view('login');
+    }	
     public function signup()
     {
     	return view('signup');
@@ -48,7 +53,7 @@ class StudentController extends Controller
 
         if($obj->save()){
            echo 'Successfully Inserted';
-           return redirect('/');
+           return redirect('login');
        }
       }
     }
