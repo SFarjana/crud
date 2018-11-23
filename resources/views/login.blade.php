@@ -12,8 +12,8 @@
 
     <form class="login-form" action="{{ URL::to('loginStore') }}" method="post">
       {{ csrf_field() }}
-      <input type="text" name="email" placeholder="email"/>
-      <input type="password" name="password" placeholder="password"/>
+      <input type="text" name="email" placeholder="email" required="required"/>
+      <input type="password" name="password" placeholder="password" required="required"/>
       <button type="submit" class="btn btn-default">login</button>
       <p class="message">Not registered? <a href="{{ URL::to('signup') }}">Create an account</a></p>
     </form>
