@@ -32,7 +32,7 @@ class StudentController extends Controller
                      ->first();
       if($user){
          Session::put('userid',$user->id);
-         return redirect('home');
+         return redirect('create');
       }
     }
     public function signupStore(Request $req)
